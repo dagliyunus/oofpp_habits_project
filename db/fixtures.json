@@ -1,0 +1,141 @@
+{
+  "__doc__": {
+    "description": "This is a fixture dataset for the Habit Tracker app, used for initializing the test database.",
+    "structure": {
+      "user": {
+        "type": "object",
+        "description": "Represents a single user account",
+        "fields": {
+          "user_id": "Integer - Unique ID of the user",
+          "username": "String - Username for login",
+          "email": "String - Email address",
+          "password": "String - Hashed or plain password (for testing only)"
+        }
+      },
+      "habits": {
+        "type": "array of objects",
+        "description": "List of habits associated with the user",
+        "fields": {
+          "habit_id": "Integer - Unique habit ID",
+          "user_id": "Integer - Refers to the associated user",
+          "name": "String - Name/title of the habit",
+          "frequency": "String - Either 'daily' or 'weekly'",
+          "description": "String - Explanation or motivation for the habit",
+          "deadline_time": "String - Deadline in 'YYYY-MM-DD HH:MM:SS' format"
+        }
+      },
+      "habit_logs": {
+        "type": "array of objects",
+        "description": "List of habit check-off logs",
+        "fields": {
+          "habit_id": "Integer - Refers to the associated habit",
+          "user_id": "Integer - Refers to the user who completed/missed the habit",
+          "completed_at": "String - Timestamp of check-off in 'YYYY-MM-DD HH:MM:SS' format",
+          "note": "String - Optional note or message for the log",
+          "missed": "Integer - 0 if completed, 1 if missed"
+        }
+      }
+    },
+    "notes": [
+      "All timestamps should use 'YYYY-MM-DD HH:MM:SS' format.",
+      "Only one user is included in this fixture.",
+      "Use this data for local development, testing, or demos.",
+      "Avoid using plain-text passwords in production."
+    ]
+  },
+
+  "user": {
+    "user_id": 1,
+    "username": "johndoe",
+    "email": "johndoe@example.com",
+    "password": "hashedpassword"
+  },
+
+  "habits": [
+    {
+      "habit_id": 1,
+      "user_id": 1,
+      "name": "Drink Water",
+      "frequency": "daily",
+      "description": "Drink 8 glasses of water",
+      "deadline_time": "2025-04-13 20:00:00"
+    },
+    {
+      "habit_id": 2,
+      "user_id": 1,
+      "name": "Read Book",
+      "frequency": "daily",
+      "description": "Read 30 pages",
+      "deadline_time": "2025-04-13 22:00:00"
+    },
+    {
+      "habit_id": 3,
+      "user_id": 1,
+      "name": "Walk Outside",
+      "frequency": "daily",
+      "description": "30-minute walk",
+      "deadline_time": "2025-04-13 18:00:00"
+    },
+    {
+      "habit_id": 4,
+      "user_id": 1,
+      "name": "Call Parents",
+      "frequency": "weekly",
+      "description": "Every Sunday",
+      "deadline_time": "2025-04-16 18:00:00"
+    },
+    {
+      "habit_id": 5,
+      "user_id": 1,
+      "name": "Clean Room",
+      "frequency": "weekly",
+      "description": "Tidy up the room",
+      "deadline_time": "2025-04-18 18:00:00"
+    }
+  ],
+
+  "habit_logs": [
+    {
+      "habit_id": 1,
+      "user_id": 1,
+      "completed_at": "2025-04-12 08:00:00",
+      "note": "",
+      "missed": 0
+    },
+    {
+      "habit_id": 1,
+      "user_id": 1,
+      "completed_at": "2025-04-11 08:00:00",
+      "note": "",
+      "missed": 1
+    },
+    {
+      "habit_id": 1,
+      "user_id": 1,
+      "completed_at": "2025-04-10 08:00:00",
+      "note": "",
+      "missed": 0
+    },
+    {
+      "habit_id": 2,
+      "user_id": 1,
+      "completed_at": "2025-04-10 09:00:00",
+      "note": "",
+      "missed": 0
+    },
+    {
+      "habit_id": 2,
+      "user_id": 1,
+      "completed_at": "2025-04-07 09:00:00",
+      "note": "",
+      "missed": 0
+    },
+    {
+      "habit_id": 2,
+      "user_id": 1,
+      "completed_at": "2025-04-04 09:00:00",
+      "note": "",
+      "missed": 0
+    }
+  ]
+}

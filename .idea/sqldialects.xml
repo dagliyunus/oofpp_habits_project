@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/db/habits.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/load_fixtures.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/repository/storage_manager.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/services/auth.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/tests/auth_test/test_auth.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/tests/storage_test/test_storage.py" dialect="GenericSQL" />
+  </component>
+</project>
